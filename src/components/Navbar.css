@@ -1,1 +1,79 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
+    padding: 20px;
+
+}
+
+.nav-brand {
+    font-size: 30px;
+    font-weight: 600;
+    color: tomato
+}
+
+nav ul {
+    display: flex;
+    gap: 40px;
+
+}
+
+nav li {
+    list-style: none;
+    font-size: 20px;
+    font-weight: 400;
+
+}
+
+nav li a {
+    text-decoration: none;
+    color: black
+}
+
+nav li a:hover {
+    color: tomato;
+    text-decoration: underline;
+}
+
+.hamburger {
+    font-size: 30px;
+    font-weight: 300;
+    color: tomato;
+    display: none;
+}
+
+@media(max-width:600px) {
+    nav ul {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+    }
+
+    .nav-links.open {
+        max-height: 300px;
+        z-index: 1;
+        background:white;
+        opacity: 0.8;
+        /* adjust based on how many items you have */
+        transition: max-height 0.3s ease-in;
+    }
+
+
+    .hamburger {
+        display: block;
+    }
+
+    nav ul li {
+        padding: 10px;
+    }
+}

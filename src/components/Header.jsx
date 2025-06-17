@@ -1,13 +1,16 @@
 import React from 'react';
-import logo from '../assets/Healthandwellness.jpg';
-import './Header.css'; // Link to your styles
+import './Header.css';
 
 const Header = () => {
   return (
-    <header className="header-container">
-      <img src={logo} alt="Health and Wellness" className="header-image" />
-    </header>
+    <div className="header-section">
+      <div className="header-content">
+        <h1>Health & Wellness Giver</h1>
+        <p>Your trusted guide to a balanced, healthy, and fulfilling life.</p>
+      </div>
+    </div>
   );
 };
 
 export default Header;
+
